@@ -16,5 +16,4 @@ phases:
       - mv build/libs/users-0.0.1-SNAPSHOT.jar users-0.0.1.jar
 artifacts:
   files:
-    - users-0.0.1-SNAPSHOT.jar
-    - .ebextensions/**/*
+    - users-0.0.1.jar
