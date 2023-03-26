@@ -1,0 +1,20 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  pre_build:
+    commands:
+      - echo In the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - ./gradlew clean build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mv build/libs/users-0.0.1-SNAPSHOT.jar users-0.0.1.jar
+artifacts:
+  files:
+    - users-0.0.1-SNAPSHOT.jar
+    - .ebextensions/**/*
